@@ -1,89 +1,106 @@
-# 🧠 AI Summarizer
+# AI Summarizer – AI-Powered Article Summarization Web App
 
-AI Summarizer is a modern web application that leverages OpenAI's powerful language models to provide concise and intelligent summaries of lengthy articles, blog posts, or any text-based web content. It simplifies information consumption and enhances productivity for readers and researchers alike.
+AI Summarizer is a full-stack web application that extracts and summarizes online articles in real time using AI-powered APIs. The application allows users to submit a URL and instantly receive a concise, readable summary of the content.
 
-## 🔍 Features
+🔗 **Live Demo:** https://ai-summarizer-two-zeta.vercel.app/
+📦 **Repository:** https://github.com/maha20514/AI_Summarizer
 
-* 🚀 Summarize long-form articles instantly using AI
-* 🌐 Extract and summarize content from any valid URL
-* 📜 Keep a searchable history of previously summarized links
-* 🎨 Clean and responsive UI built with Next.js and Tailwind CSS
-* ⚡ Powered by OpenAI GPT models for intelligent summarization
+---
 
-## 📷 Demo
+## 🚀 Features
 
-Live demo: [https://ai-summarizer-app.vercel.app](#)
+* Extracts article content directly from URLs
+* Generates concise summaries using AI APIs
+* Clean and responsive user interface
+* Fast client-server communication for real-time results
+* Error handling for invalid or unsupported URLs
 
-## 🛠️ Tech Stack
+---
 
-* Frontend: React + Next.js
-* Styling: Tailwind CSS
-* State Management: Redux Toolkit
-* API Integration: OpenAI API
-* Deployment: Vercel (or Netlify, if used)
+## 🧱 Tech Stack
 
-## 🚀 Getting Started
+**Frontend**
 
-### Prerequisites
+* React
+* Next.js
+* Tailwind CSS
 
-* Node.js ≥ 18.x
-* OpenAI API Key
+**Backend / APIs**
 
-### Installation
+* Node.js
+* RapidAPI Article Extractor
+* OpenAI API for summarization
 
-1. Clone the repository:
+**Deployment**
+
+* Vercel
+
+---
+
+## 🏗️ Architecture Overview
+
+The application follows a client–server model:
+
+1. The user submits an article URL through the frontend.
+2. The backend retrieves the article content using an extraction API.
+3. The content is processed and sent to an AI summarization service.
+4. The summarized result is returned and displayed in the UI.
+
+This architecture ensures modular API integration and allows the summarization engine to be replaced or upgraded easily.
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/maha20514/AI_Summarizer.git
 cd AI_Summarizer
 ```
 
-2. Install dependencies:
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-3. Create a .env.local file and add your OpenAI API key:
+### 3. Configure environment variables
+
+Create a `.env` file:
 
 ```env
-NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_API_KEY=your_api_key
+RAPIDAPI_KEY=your_api_key
 ```
 
-4. Run the development server:
+### 4. Run the development server
 
 ```bash
 npm run dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) to view the app in your browser.
+The app will be available at:
 
-## 🧪 Usage
-
-1. Paste any article or blog URL into the input field.
-2. Click the "Summarize" button.
-3. Wait for a brief moment while the AI processes the content.
-4. View or copy your summary!
-
-## 📁 Folder Structure
-
-* components/: Reusable UI components
-* app/: Next.js pages and routing
-* redux/: State management logic
-* utils/: Helper functions and constants
-* public/: Static assets
-
-## 🔐 Environment Variables
-
-Make sure to include the following in your .env.local:
-
-```env
-NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key
+```
+http://localhost:3000
 ```
 
-> Never expose your secret keys in public repositories.
+---
 
-## 🧠 How It Works
+## 🧪 Possible Improvements
 
-The app uses OpenAI’s GPT model to read and understand the content extracted from a given URL and then generates a short, contextually accurate summary of the main ideas.
+* Add history of previously summarized articles
+* Support multiple languages
+* Implement caching to reduce API costs
+* Add user authentication and saved summaries
 
+---
+
+## 👩‍💻 Author
+
+**Maha Aledresi**
+Backend / Full-Stack Developer
+
+* Portfolio: https://maha-portfolio-six.vercel.app/
+* LinkedIn: https://www.linkedin.com/in/maha-aledresi-32a043205/
